@@ -1,6 +1,11 @@
 #!/bin/bash
 source ~/.rvm/scripts/rvm
-blogLocation="/home/pi/blog/whispering-forest-1331"
+blogLocation=
+if [[ -n "$blogLocation" ]]:
+then
+    echo "Blog Location is not defined."
+    exit 1
+fi
 fileName=${blogLocation}/source/_posts/$(date +"%Y-%m-%d-daily-log.markdown")
 lockFile=${blogLocation}/../blog.lock
 gammuFile=${blogLocation}/../blog.txt
