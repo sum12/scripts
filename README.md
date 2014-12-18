@@ -24,3 +24,13 @@ There are various commands in the email, like expense management,
 todo management and blog management.
 
  
+## job.sh
+It continoulsy monitors the syslog for errors from gammu. And if any
+of those is found then just power cycles the usb modem. 
+
+The port of modem is as of now hardcoded. As I rarely remove the modem.
+
+The script was written just because such a case would arise every time
+pi power cycles.  During the power cycle the modem goes into *sleep mode*
+but does not wake up as soon as the pi reboots. 
+
